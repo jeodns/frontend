@@ -10,6 +10,16 @@
         <Menu class="home-main__header-menu"/>
         <Brand class="home-main__header-brand"/>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="col" style="z-index: 3">
+            <ContactCard/>
+          </div>
+          <div class="col" style="z-index: 3">
+            
+          </div>
+        </div>
+      </div>
     </div>
     <div class="home-footer">
       <Footer />
@@ -21,6 +31,7 @@
 import Menu from "@/components/Menu.vue";
 import Brand from "@/components/Brand.vue";
 import Footer from "@/components/Footer.vue";
+import ContactCard from "@/components/ContactCard.vue";
 
 import { defineComponent } from "vue";
 
@@ -28,7 +39,8 @@ export default defineComponent({
   components: {
     Menu,
     Brand,
-    Footer
+    Footer,
+    ContactCard
   },
   setup() {},
 });
@@ -39,7 +51,14 @@ export default defineComponent({
   &-main {
     height: 80vh;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+
+    &__header {
+      width: 100%;
+      &-menu {
+        gap: 2.5rem;
+      }
+    }
 
     &__background {
       height: 100%;
@@ -98,13 +117,6 @@ export default defineComponent({
       position: absolute;
       bottom: 0;
       z-index: 2;
-    }
-
-    &__header {
-      width: 100%;
-      &-menu {
-        gap: 2.5rem;
-      }
     }
   }
 

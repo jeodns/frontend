@@ -35,6 +35,8 @@
 
   --section-gap: 160px;
   --primary-color: #F8B713;
+  --title-color: #173D7A;
+  --submit-color: #000F57;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +51,8 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
     --primary-color: #F8B713;
+    --title-color: #173D7A;
+    --submit-color: #000F57;
   }
 }
 
