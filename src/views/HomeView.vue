@@ -1,31 +1,35 @@
 <template>
   <div>
     <div class="home-main">
-      <div class="home-main__header d-flex flex-row justify-space-between pt-4 px-5">
-        <div class="home-main__header-menu d-flex flex-row justify-space-around">
-          <p>
-            <span>پشتیبانی</span>
-            <img class="mx-1" src="@/assets/icons/headset_mic.svg" alt="">
-          </p>
-          <p>JeoIP <span><img class="mx-1" src="@/assets/icons/left-chevron.png" alt=""></span></p>
-          <p>وب شات <span><img class="mx-1" src="@/assets/icons/left-chevron.png" alt=""></span></p>
-          <p>جی سرور <span><img class="mx-1" src="@/assets/icons/left-chevron.png" alt=""></span></p>
-          <p>هلدینگ داده نگار جی <span><img class="mx-1" src="@/assets/icons/left-chevron.png" alt=""></span></p>
-        </div>
-        <div class="home-main__header-brand"></div>
-      </div>
       <div class="home-main__background"></div>
+      <div class="home-main__circle"></div>
+      <div class="home-main__light-cube-1"></div>
+      <div class="home-main__light-cube-2"></div>
+      <div class="home-main__wave"></div>
+      <div class="home-main__header d-flex flex-row justify-content-between pt-4 px-5">
+        <Menu class="home-main__header-menu"/>
+        <Brand class="home-main__header-brand"/>
+      </div>
     </div>
     <div class="home-footer">
-
+      <Footer />
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import Menu from "@/components/Menu.vue";
+import Brand from "@/components/Brand.vue";
+import Footer from "@/components/Footer.vue";
+
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  components: {
+    Menu,
+    Brand,
+    Footer
+  },
   setup() {},
 });
 </script>
@@ -49,16 +53,58 @@ export default defineComponent({
       z-index: 1;
     }
 
-    &__header {
-      &-menu {
-        gap: 2.5rem;
+    &__circle {
+      width: 111px;
+      height: 111px;
+      border-radius: 50%;
+      position: absolute;
+      left: 39%;
+      top: 18%;
+      background: rgb(28,64,242);
+      background: linear-gradient(90deg, rgba(28,64,242,1) 10%, rgba(22,106,244,1) 40%, rgba(15,157,247,1) 70%, rgba(3,248,251,1) 100%);
+      z-index: 2;
+    }
+
+    &__light-cube {
+      &-1 {
+        width: 54px;
+        height: 129px;
+        background: url('../assets/icons/light-cube.svg');
+        z-index: 2;
+        opacity: 1;
+        position: absolute;
+        right: 7%;
+        top: 15%;
+      }
+
+      &-2 {
+        width: 54px;
+        height: 129px;
+        background: url('../assets/icons/light-cube.svg');
+        z-index: 2;
+        opacity: 1;
+        position: absolute;
+        left: 45%;
+        top: 50%;
       }
     }
 
-    & p {
-      opacity: 1;
-      z-index: 3;
-      color: white;
+    &__wave {
+      width: 100%;
+      height: 120px;
+      background: url('../assets/icons/waves.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    &__header {
+      width: 100%;
+      &-menu {
+        gap: 2.5rem;
+      }
     }
   }
 
