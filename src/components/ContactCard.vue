@@ -29,7 +29,6 @@ export default defineComponent({
   &__container {
     min-width: 367px;
     max-width: 367px;
-    height: 470px;
     margin-bottom: -5%;
     background-color: white;
     border-radius: 10px;
@@ -39,6 +38,8 @@ export default defineComponent({
     opacity: 1;
 
     @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
       margin-bottom: -20%;
     }
   }

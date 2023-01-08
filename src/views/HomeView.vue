@@ -15,10 +15,7 @@
         <ContactCard/>
       </div>
     </div>
-    <div class="d-md-none mb-3" style="margin-top: 20%;">
-      <Footer />
-    </div>
-    <div class="d-none d-md-block home-footer">
+    <div class="home-footer">
       <Footer />
     </div>
   </div>
@@ -47,20 +44,19 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home {
-
   &-container {
     position: relative;
   }
 
   &-main {
 
-    @media (min-width: 768px) {
-      height: 80vh;
-    }
-
     height: auto;
     position: relative;
     z-index: 1;
+    
+    @media (min-width: 768px) {
+      height: 85vh;
+    }
 
     &__header {
       width: 100%;
@@ -133,6 +129,11 @@ export default defineComponent({
   &-footer {
     background-color: white;
     z-index: 3;
+
+    @media (max-width: 768px) {
+      margin-top: 22%;
+      margin-bottom: 30px;
+    }
   }
 }
 </style>
