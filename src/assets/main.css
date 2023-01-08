@@ -1,3 +1,109 @@
 @import './base.css';
 
+@font-face {
+  font-family: "Black";
+  src: url("@/assets/fonts/IRANSansWeb_Black.woff");
+}
 
+@font-face {
+  font-family: "Bold";
+  src: url("@/assets/fonts/IRANSansWeb_Bold.woff");
+}
+
+@font-face {
+  font-family: "Light";
+  src: url("@/assets/fonts/IRANSansWeb_Light.woff");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("@/assets/fonts/IRANSansWeb_Medium.woff");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url("@/assets/fonts/IRANSansWeb.woff");
+}
+
+@font-face {
+  font-family: "UltraLight";
+  src: url("@/assets/fonts/IRANSansWeb_UltraLight.woff");
+}
+
+@font-face {
+  font-family: "Black-Num";
+  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Black.woff");
+}
+
+@font-face {
+  font-family: "Bold-Num";
+  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Bold.woff");
+}
+
+@font-face {
+  font-family: "Light-Num";
+  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Light.woff");
+}
+
+@font-face {
+  font-family: "Medium-Num";
+  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Medium.woff");
+}
+
+@font-face {
+  font-family: "Regular-Num";
+  src: url("@/assets/fonts/IRANSansWeb(FaNum).woff");
+}
+
+@font-face {
+  font-family: "UltraLight-Num";
+  src: url("@/assets/fonts/IRANSansWeb(FaNum)_UltraLight.woff");
+}
+
+.black-font {
+  font-family: 'Black';
+}
+
+.bold-font {
+  font-family: 'Bold';
+}
+
+.light-font {
+  font-family: 'Light';
+}
+
+.medium-font {
+  font-family: 'Medium';
+}
+
+.regular-font {
+  font-family: 'Regular';
+}
+
+.thin-font {
+  font-family: 'UltraLight';
+}
+
+.black-font-num {
+  font-family: 'Black-Num';
+}
+
+.bold-font-num {
+  font-family: 'Bold-Num';
+}
+
+.light-font-num {
+  font-family: 'Light-Num';
+}
+
+.medium-font-num {
+  font-family: 'Medium-Num';
+}
+
+.regular-font-num {
+  font-family: 'Regular-Num';
+}
+
+.thin-font-num {
+  font-family: 'UltraLight-Num';
+}
