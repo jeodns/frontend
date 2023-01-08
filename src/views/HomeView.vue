@@ -1,27 +1,24 @@
 <template>
-  <div>
+  <div class="home-container">
     <div class="home-main">
       <div class="home-main__background"></div>
       <div class="home-main__circle"></div>
       <div class="home-main__light-cube-1"></div>
       <div class="home-main__light-cube-2"></div>
       <div class="home-main__wave"></div>
-      <div class="home-main__header d-flex flex-row justify-content-between pt-4 px-5">
+      <div class="home-main__header d-none d-md-flex flex-row justify-content-between pt-4 px-5">
         <Menu class="home-main__header-menu"/>
         <Brand class="home-main__header-brand"/>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col" style="z-index: 3">
-            <ContactCard/>
-          </div>
-          <div class="col" style="z-index: 3">
-            
-          </div>
-        </div>
+      <div class="d-flex flex-column align-items-center flex-md-row-reverse align-items-md-start justify-content-md-center mx-5 pt-5">
+        <Content/>
+        <ContactCard/>
       </div>
     </div>
-    <div class="home-footer">
+    <div class="d-md-none mb-3" style="margin-top: 20%;">
+      <Footer />
+    </div>
+    <div class="d-none d-md-block home-footer">
       <Footer />
     </div>
   </div>
@@ -32,6 +29,7 @@ import Menu from "@/components/Menu.vue";
 import Brand from "@/components/Brand.vue";
 import Footer from "@/components/Footer.vue";
 import ContactCard from "@/components/ContactCard.vue";
+import Content from "@/components/Content.vue"
 
 import { defineComponent } from "vue";
 
@@ -40,7 +38,8 @@ export default defineComponent({
     Menu,
     Brand,
     Footer,
-    ContactCard
+    ContactCard,
+    Content
   },
   setup() {},
 });
@@ -48,8 +47,18 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home {
+
+  &-container {
+    position: relative;
+  }
+
   &-main {
-    height: 80vh;
+
+    @media (min-width: 768px) {
+      height: 80vh;
+    }
+
+    height: auto;
     position: relative;
     z-index: 1;
 
@@ -111,6 +120,7 @@ export default defineComponent({
     &__wave {
       width: 100%;
       height: 120px;
+      margin-bottom: 30px;
       background: url('../assets/icons/waves.svg');
       background-repeat: no-repeat;
       background-size: cover;
@@ -121,7 +131,8 @@ export default defineComponent({
   }
 
   &-footer {
-    height: 100%;
+    background-color: white;
+    z-index: 3;
   }
 }
 </style>
