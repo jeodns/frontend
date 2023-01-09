@@ -1,5 +1,6 @@
 <template>
   <div class="home-container">
+    <Modal />
     <div class="home-main">
       <div class="home-main__background"></div>
       <div class="home-main__circle"></div>
@@ -23,6 +24,7 @@
 </template>
 
 <script lang="ts">
+import Modal from '../components/Modal.vue'
 import DrawerMenu from "../components/DrawerMenu.vue";
 import Menu from "../components/Menu.vue";
 import Brand from "../components/Brand.vue";
@@ -34,6 +36,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   components: {
+    Modal,
     DrawerMenu,
     Menu,
     Brand,

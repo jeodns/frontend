@@ -37,6 +37,7 @@
   --primary-color: #F8B713;
   --title-color: #173D7A;
   --submit-color: #000F57;
+  --green-color: #67E893;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,6 +54,7 @@
     --primary-color: #F8B713;
     --title-color: #173D7A;
     --submit-color: #000F57;
+    --green-color: #67E893;
   }
 }
 
