@@ -8,12 +8,12 @@
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="close ms-3 pt-1" data-bs-dismiss="modal"></div>
+        <div class="close ms-4 pt-1" data-bs-dismiss="modal"></div>
         <div class="d-flex flex-column align-items-center justify-content-center mt-4">
           <div class="circle">
             <div class="tick-mark"></div>
           </div>
-          <p class="modal-text medium-font my-3">
+          <p class="modal-text medium-font my-4">
             از ارسال پیام شما متشکریم! <br/>
   در اسرع وقت با شما تماس خواهیم گرفت.
           </p>
@@ -45,12 +45,16 @@ export default defineComponent({
   &-content {
     width: 369px;
     height: 270px;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.25); 
+    box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.25);
+    border: none;
   }
 
   &-text {
     text-align: center !important;
     direction: rtl;
-    font-size: 18px;
+    font-size: 16px;
+    color: var(--title-color)
   }
 }
 
@@ -61,7 +65,7 @@ export default defineComponent({
     content: "\00d7";
     color: #999999;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -70,7 +74,7 @@ export default defineComponent({
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid var(--green-color);
+  border: 2px solid var(--green-color);
   display: flex;
   flex-direction: column;
   align-items: center;
