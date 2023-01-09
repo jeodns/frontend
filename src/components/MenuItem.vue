@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="bold-font mx-1">{{ title }}</span>
+    <span class="bold-font mx-2">{{ title }}</span>
     <slot name="icon"></slot>
   </div>
 </template>

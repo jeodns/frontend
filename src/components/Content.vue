@@ -1,5 +1,5 @@
 <template>
-  <div class="content__container">
+  <div class="content__container mx-5 mx-md-0 pb-5 pb-md-0">
     <p class="content__title">
       <span class="content__title-brand"> JeoDNS </span>
       <span class="medium-font" style="color: var(--primary-color)">؛ لورم اپسیوم متن</span>
@@ -40,11 +40,14 @@ export default defineComponent({
 
     &-brand {
       font-size: 36px;
+      font-family: 'Poppins';
+      font-weight: normal;
     }
 
   }
 
   &__text {
+    max-width: 537px;
     font-size: 13px;
     text-align: right;
     direction: rtl;

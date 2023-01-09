@@ -10,9 +10,9 @@
         <Menu class="home-main__header-menu"/>
         <Brand class="home-main__header-brand"/>
       </div>
-      <div class="d-flex flex-column align-items-center flex-md-row-reverse align-items-md-start justify-content-md-center mx-5 pt-5">
-        <Content/>
-        <ContactCard/>
+      <div class="d-flex flex-column align-items-center justify-content-center flex-md-row-reverse justify-content-md-start mx-md-5 pt-5">
+        <Content class="home-main__content"/>
+        <ContactCard class="home-main__contact-card me-md-auto"/>
       </div>
     </div>
     <div class="home-footer">
@@ -56,12 +56,26 @@ export default defineComponent({
     
     @media (min-width: 768px) {
       height: 85vh;
+
+      &__content {
+        margin-top: 50px;
+        margin-right: 70px;
+      }
+
+      &__contact-card {
+        margin-top: 50px;
+        margin-left: 60px;
+      }
     }
 
     &__header {
       width: 100%;
       &-menu {
         gap: 2.5rem;
+      }
+
+      &-brand {
+        margin-right: 60px;
       }
     }
 
@@ -82,7 +96,7 @@ export default defineComponent({
       height: 111px;
       border-radius: 50%;
       position: absolute;
-      left: 39%;
+      left: 32%;
       top: 18%;
       background: rgb(28,64,242);
       background: linear-gradient(90deg, rgba(28,64,242,1) 10%, rgba(22,106,244,1) 40%, rgba(15,157,247,1) 70%, rgba(3,248,251,1) 100%);
@@ -97,7 +111,7 @@ export default defineComponent({
         z-index: 2;
         opacity: 1;
         position: absolute;
-        right: 7%;
+        right: 10%;
         top: 15%;
       }
 
@@ -108,15 +122,14 @@ export default defineComponent({
         z-index: 2;
         opacity: 1;
         position: absolute;
-        left: 45%;
+        left: 35%;
         top: 50%;
       }
     }
 
     &__wave {
       width: 100%;
-      height: 120px;
-      margin-bottom: 30px;
+      height: 100px;
       background: url('../assets/icons/waves.svg');
       background-repeat: no-repeat;
       background-size: cover;
