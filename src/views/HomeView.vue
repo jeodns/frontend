@@ -71,10 +71,6 @@ export default defineComponent({
       }
     }
 
-    &__drawer {
-      
-    }
-
     &__header {
       width: 100%;
       &-menu {
@@ -108,6 +104,10 @@ export default defineComponent({
       background: rgb(28,64,242);
       background: linear-gradient(90deg, rgba(28,64,242,1) 10%, rgba(22,106,244,1) 40%, rgba(15,157,247,1) 70%, rgba(3,248,251,1) 100%);
       z-index: 3;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     &__light-cube {
@@ -120,6 +120,10 @@ export default defineComponent({
         position: absolute;
         right: 10%;
         top: 15%;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
 
       &-2 {
@@ -131,6 +135,11 @@ export default defineComponent({
         position: absolute;
         left: 35%;
         top: 50%;
+
+        @media (max-width: 768px) {
+          left: 15%;
+          top: 32%;
+        }
       }
     }
 
