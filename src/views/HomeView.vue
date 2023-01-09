@@ -23,12 +23,12 @@
 </template>
 
 <script lang="ts">
-import DrawerMenu from "@/components/DrawerMenu.vue";
-import Menu from "@/components/Menu.vue";
-import Brand from "@/components/Brand.vue";
-import Footer from "@/components/Footer.vue";
-import ContactCard from "@/components/ContactCard.vue";
-import Content from "@/components/Content.vue"
+import DrawerMenu from "../components/DrawerMenu.vue";
+import Menu from "../components/Menu.vue";
+import Brand from "../components/Brand.vue";
+import Footer from "../components/Footer.vue";
+import ContactCard from "../components/ContactCard.vue";
+import Content from "../components/Content.vue"
 
 import { defineComponent } from "vue";
 
