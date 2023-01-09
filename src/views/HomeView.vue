@@ -6,6 +6,7 @@
       <div class="home-main__light-cube-1"></div>
       <div class="home-main__light-cube-2"></div>
       <div class="home-main__wave"></div>
+      <DrawerMenu class="home-main__drawer d-block d-md-none"/>
       <div class="home-main__header d-none d-md-flex flex-row justify-content-between pt-4 px-5">
         <Menu class="home-main__header-menu"/>
         <Brand class="home-main__header-brand"/>
@@ -22,6 +23,7 @@
 </template>
 
 <script lang="ts">
+import DrawerMenu from "@/components/DrawerMenu.vue";
 import Menu from "@/components/Menu.vue";
 import Brand from "@/components/Brand.vue";
 import Footer from "@/components/Footer.vue";
@@ -32,6 +34,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   components: {
+    DrawerMenu,
     Menu,
     Brand,
     Footer,
@@ -68,6 +71,10 @@ export default defineComponent({
       }
     }
 
+    &__drawer {
+      
+    }
+
     &__header {
       width: 100%;
       &-menu {
@@ -88,7 +95,7 @@ export default defineComponent({
       top: 0;
       left: 0;
       right: 0;
-      z-index: 1;
+      z-index: -1;
     }
 
     &__circle {
@@ -100,7 +107,7 @@ export default defineComponent({
       top: 18%;
       background: rgb(28,64,242);
       background: linear-gradient(90deg, rgba(28,64,242,1) 10%, rgba(22,106,244,1) 40%, rgba(15,157,247,1) 70%, rgba(3,248,251,1) 100%);
-      z-index: 2;
+      z-index: 3;
     }
 
     &__light-cube {

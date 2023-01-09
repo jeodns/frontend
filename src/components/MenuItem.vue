@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="bold-font mx-2">{{ title }}</span>
+    <span class="bold-font mx-2" :style="getTitleStyle">{{ title }}</span>
     <slot name="icon"></slot>
   </div>
 </template>
@@ -14,7 +14,18 @@ export default defineComponent({
       type: String,
       default: "",
     },
+    color: {
+      type: String,
+      default: "white",
+    }
   },
+  computed: {
+    getTitleStyle() {
+      return {
+        color: this.color
+      }
+    }
+  }
 });
 </script>
 
@@ -23,6 +34,5 @@ div, span {
   opacity: 1;
   z-index: 3;
   font-size: 14px;
-  color: white;
 }
 </style>
