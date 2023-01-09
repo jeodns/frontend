@@ -59,6 +59,7 @@ p {
   & span {
     color: white;
     font-size: 8px;
+    margin: -2px;
   }
 }
 </style>
