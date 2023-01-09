@@ -39,6 +39,8 @@ export default defineComponent({
     padding: 30px 0px;
 
     @media (max-width: 768px) {
+      width: 90%;
+      min-width: 90%;
       height: 100%;
       margin-bottom: -15%;
     }

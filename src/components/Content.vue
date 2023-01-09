@@ -47,6 +47,7 @@ export default defineComponent({
   }
 
   &__text {
+    max-width: 560px;
     font-size: 13px;
     text-align: right;
     direction: rtl;
