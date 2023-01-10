@@ -36,7 +36,7 @@
       @input="validateMessage"
     ></textarea>
     <p class="contact-card__validation-feedback regular-font">{{ validationFeedbacks.message }}</p>
-    <button
+    <div
       @click="submit($event)"
       class="
         contact-card__submit
@@ -48,8 +48,8 @@
       "
     >
       <p class="medium-font mx-1 my-auto">ارسال پیام</p>
-      <img class="my-auto" src="@/assets/icons/arrow-left.svg" alt="" />
-    </button>
+      <span class="mdi mdi-arrow-left-bold" style="color: black"></span>
+    </div>
   </form>
 </template>
 
