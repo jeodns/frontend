@@ -1,7 +1,7 @@
 <template>
   <div class="drawer-menu__container mx-4 pt-3">
     <div class="d-flex flex-row justify-content-between">
-      <img src="@/assets/icons/menu-burger.svg" alt="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+      <span class="mdi mdi-24px mdi-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="color: white"></span>
       <Brand />
     </div>
     <div class="drawer-menu__offcanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
