@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-row">
+  <a class="d-flex flex-row" href="https://jeodns.com/" target="_blank">
     <p class="my-auto mx-2">JeoDNS</p>
     <div
       class="
@@ -15,7 +15,7 @@
       <span class="regular-font">E</span>
       <span class="regular-font">O</span>
     </div>
-  </div>
+  </a>
 </template>
 
 <script lang="ts">
