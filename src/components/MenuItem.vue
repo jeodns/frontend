@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <a class="bold-font mx-2" :href="href" target="_blank" :style="getTitleStyle">{{ title }}</a>
-    <slot name="icon"></slot>
+  <div class="d-flex flex-row">
+    <a class="bold-font mx-2 my-auto" :href="href" target="_blank" :style="getTitleStyle">{{ title }}</a>
+    <span class="my-auto mdi mdi-18px" :class="icon" :style="getIconStyle"></span>
   </div>
 </template>
 
@@ -21,12 +21,25 @@ export default defineComponent({
     color: {
       type: String,
       default: "white",
+    },
+    icon: {
+      type: String,
+      default: 'mdi-chevron-left'
+    },
+    iconColor: {
+      type: String,
+      default: "white",
     }
   },
   computed: {
     getTitleStyle() {
       return {
         color: this.color
+      }
+    },
+    getIconStyle() {
+      return {
+        color: this.iconColor
       }
     }
   }
