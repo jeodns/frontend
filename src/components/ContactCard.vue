@@ -2,7 +2,7 @@
   <div class="contact-card__container px-4">
     <p class="contact-card__title bold-font mb-4">ما برای همکاری با شما آماده ایم؛ <br/>  با ما در تماس باشید!</p>
     <input type="text" class="contact-card__input regular-font form-control" placeholder="نام شما">
-    <input type="number" class="contact-card__input mt-4 regular-font form-control" placeholder="شماره تماس">
+    <input type="text" class="contact-card__input mt-4 regular-font form-control" placeholder="شماره تماس">
     <textarea class="contact-card__textarea form-control mt-4 regular-font" placeholder="پیام شما" rows="6"></textarea>
     <button class="contact-card__submit py-2 mt-4 d-flex flex-row justify-content-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       <p class="medium-font mx-1 my-auto">ارسال پیام</p>
