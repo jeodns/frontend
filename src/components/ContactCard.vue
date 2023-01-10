@@ -1,6 +1,6 @@
 <template>
   <form class="contact-card__container px-4 needs-validation" novalidate>
-    <p class="contact-card__title bold-font mb-4">
+    <p class="contact-card__title iransans mb-4">
       ما برای همکاری با شما آماده ایم؛ <br />
       با ما در تماس باشید!
     </p>
@@ -8,34 +8,34 @@
       v-model="name"
       id="name"
       type="text"
-      class="contact-card__input regular-font form-control"
+      class="contact-card__input iransans form-control"
       :class="(validationFeedbacks.name) ? 'not-valid' : ''"
       placeholder="نام شما"
       required
       minlength="5"
       @input="validateName"
     />
-    <p class="contact-card__validation-feedback regular-font">{{ validationFeedbacks.name }}</p>
+    <p class="contact-card__validation-feedback iransans">{{ validationFeedbacks.name }}</p>
     <input
       v-model="phoneNumber"
       id="phoneNumber"
       type="text"
-      class="contact-card__input mt-4 regular-font form-control"
+      class="contact-card__input mt-4 iransans form-control"
       :class="(validationFeedbacks.phoneNumber) ? 'not-valid' : ''"
       placeholder="شماره تماس"
       @input="validatePhoneNumber"
     />
-    <p class="contact-card__validation-feedback regular-font">{{ validationFeedbacks.phoneNumber }}</p>
+    <p class="contact-card__validation-feedback iransans">{{ validationFeedbacks.phoneNumber }}</p>
     <textarea
       v-model="message"
       id="message"
-      class="contact-card__textarea form-control mt-4 regular-font"
+      class="contact-card__textarea form-control mt-4 iransans"
       :class="(validationFeedbacks.message) ? 'not-valid' : ''"
       placeholder="پیام شما"
       rows="6"
       @input="validateMessage"
     ></textarea>
-    <p class="contact-card__validation-feedback regular-font">{{ validationFeedbacks.message }}</p>
+    <p class="contact-card__validation-feedback iransans">{{ validationFeedbacks.message }}</p>
     <div
       @click="submit($event)"
       class="
@@ -47,7 +47,7 @@
         justify-content-center
       "
     >
-      <p class="medium-font mx-1 my-auto">ارسال پیام</p>
+      <p class="iransans mx-1 my-auto">ارسال پیام</p>
       <span class="mdi mdi-arrow-left-bold" style="color: black"></span>
     </div>
   </form>
@@ -163,6 +163,7 @@ export default defineComponent({
     font-size: 22px;
     text-align: right;
     direction: rtl;
+    font-weight: bold;
   }
 
   &__input,
@@ -208,6 +209,7 @@ export default defineComponent({
     & p {
       color: var(--submit-color);
       font-size: 14px;
+      font-weight: 600;
     }
 
     & img {

@@ -1,57 +1,11 @@
 @import './base.css';
 
 @font-face {
-  font-family: "Black";
-  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Black.woff");
-}
-
-@font-face {
-  font-family: "Bold";
-  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Bold.woff");
-}
-
-@font-face {
-  font-family: "Light";
-  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Light.woff");
-}
-
-@font-face {
-  font-family: "Medium";
-  src: url("@/assets/fonts/IRANSansWeb(FaNum)_Medium.woff");
-}
-
-@font-face {
-  font-family: "UltraLight";
-  src: url("@/assets/fonts/IRANSansWeb(FaNum)_UltraLight.woff");
-}
-
-@font-face {
   font-family: "Regular";
   src: url("@/assets/fonts/IRANSansWeb(FaNum).woff");
 }
 
-
-.black-font {
-  font-family: 'Black';
-}
-
-.bold-font {
-  font-family: 'Bold';
-}
-
-.light-font {
-  font-family: 'Light';
-}
-
-.medium-font {
-  font-family: 'Medium';
-}
-
-.ultra-light-font {
-  font-family: 'UltraLight';
-}
-
-.regular-font {
+.iransans {
   font-family: 'Regular';
 }
 

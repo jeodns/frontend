@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-row">
-    <a class="bold-font mx-2 my-auto" :href="href" target="_blank" :style="getTitleStyle">{{ title }}</a>
+    <a class="iransans mx-2 my-auto" :href="href" target="_blank" :style="getTitleStyle">{{ title }}</a>
     <span class="my-auto mdi mdi-18px" :class="icon" :style="getIconStyle"></span>
   </div>
 </template>
@@ -55,6 +55,7 @@ div, span {
 
 a {
   text-decoration: none;
+  font-weight: bold;
   cursor: pointer;
 }
 </style>
