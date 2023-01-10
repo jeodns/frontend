@@ -1,14 +1,16 @@
 <template>
   <div
-    class="modal fade"
+    v-if="modelValue"
+    class="modal fade show"
     id="staticBackdrop"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
+    aria-modal="true"
+    role="dialog" 
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="close ms-4 pt-1" data-bs-dismiss="modal"></div>
+        <div class="close ms-4 pt-1" @click="onClose"></div>
         <div class="d-flex flex-column align-items-center justify-content-center mt-4">
           <div class="circle">
             <div class="tick-mark"></div>
@@ -27,13 +29,26 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  props: {
+    modelValue: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  emits: ['update:modelValue'],
   setup() {},
+  methods: {
+    onClose() {
+      this.$emit('update:modelValue', false)
+    }
+  }
 });
 </script>
 
 <style lang="scss" scoped>
 .modal {
   background-color: rgba(255,255,255,0.6) !important; 
+  display: block;
 
   &-dialog {
     display: flex;
@@ -60,6 +75,7 @@ export default defineComponent({
 }
 
 .close {
+  cursor: pointer;
   &:after {
     aspect-ratio: 1/1;
     display: inline-block;

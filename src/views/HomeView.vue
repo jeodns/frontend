@@ -1,6 +1,6 @@
 <template>
   <div class="home-container">
-    <Modal />
+    <Modal v-model="showModal"/>
     <div class="home-main">
       <div class="home-main__background"></div>
       <div class="home-main__circle"></div>
@@ -14,7 +14,7 @@
       </div>
       <div class="d-flex flex-column align-items-center justify-content-center flex-md-row-reverse justify-content-md-start mx-md-5 pt-5">
         <Content class="home-main__content"/>
-        <ContactCard class="home-main__contact-card me-md-auto"/>
+        <ContactCard class="home-main__contact-card me-md-auto" :loading="homeStore.loading" @submit="onContactCardSubmit"/>
       </div>
     </div>
     <div class="home-footer">
@@ -31,7 +31,8 @@ import Brand from "../components/Brand.vue";
 import Footer from "../components/Footer.vue";
 import ContactCard from "../components/ContactCard.vue";
 import Content from "../components/Content.vue"
-
+import type Message from '../types/Message'
+import { useHomeStore } from '../stores/home'
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -44,7 +45,26 @@ export default defineComponent({
     ContactCard,
     Content
   },
-  setup() {},
+  setup() {
+    const homeStore = useHomeStore();
+    return {homeStore}
+  },
+  data() {
+    return {
+      showModal: false,
+    }
+  },
+  methods: {
+    onContactCardSubmit(message: Message) {
+      this.homeStore.sendMessage(message)
+      .then(() => {
+        console.log('then');
+        this.showModal = true;
+      }).catch(() => {
+        console.log('catch');
+      })
+    }
+  }
 });
 </script>
 

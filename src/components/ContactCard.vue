@@ -47,8 +47,11 @@
         justify-content-center
       "
     >
-      <p class="iransans mx-1 my-auto">ارسال پیام</p>
-      <span class="mdi mdi-arrow-left-bold" style="color: black"></span>
+      <div v-if="loading" class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p v-if="!loading" class="iransans mx-1 my-auto">ارسال پیام</p>
+      <span v-if="!loading" class="mdi mdi-arrow-left-bold" style="color: black"></span>
     </div>
   </form>
 </template>
@@ -57,6 +60,13 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  props: {
+    loading: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  emits: ['submit'],
   data() {
     return {
       name: '',
@@ -205,6 +215,7 @@ export default defineComponent({
     background-color: var(--primary-color);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 
     & p {
       color: var(--submit-color);
