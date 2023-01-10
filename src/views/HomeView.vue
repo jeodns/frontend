@@ -20,11 +20,13 @@
     <div class="home-footer">
       <Footer />
     </div>
+    <Snackbar v-model="snackbar" message="خطا در برقراری ارتباط"/>
   </div>
 </template>
 
 <script lang="ts">
 import Modal from '../components/Modal.vue'
+import Snackbar from '../components/Snackbar.vue'
 import DrawerMenu from "../components/DrawerMenu.vue";
 import Menu from "../components/Menu.vue";
 import Brand from "../components/Brand.vue";
@@ -38,6 +40,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   components: {
     Modal,
+    Snackbar,
     DrawerMenu,
     Menu,
     Brand,
@@ -52,16 +55,16 @@ export default defineComponent({
   data() {
     return {
       showModal: false,
+      snackbar: false
     }
   },
   methods: {
     onContactCardSubmit(message: Message) {
       this.homeStore.sendMessage(message)
       .then(() => {
-        console.log('then');
         this.showModal = true;
       }).catch(() => {
-        console.log('catch');
+        this.snackbar = true
       })
     }
   }
