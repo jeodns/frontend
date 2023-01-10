@@ -6,28 +6,28 @@
     </div>
     <div class="drawer-menu__offcanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="drawer-menu__items d-flex flex-column align-items-end mx-4 mt-4">
-        <MenuItem title="هلدینگ داده نگار جی" color="#173D7A">
+        <MenuItem title="هلدینگ داده نگار جی" color="#173D7A" href="https://dnj.co.ir">
           <template #icon>
             <img src="@/assets/icons/left-chevron-dark.svg" alt="" />
           </template>
         </MenuItem>
-        <MenuItem title="جی سرور" color="#173D7A">
+        <MenuItem title="جی سرور" color="#173D7A" href="https://jeyserver.com">
           <template #icon>
             <img src="@/assets/icons/left-chevron-dark.svg" alt="" />
           </template>
         </MenuItem>
-        <MenuItem title="وب شات" color="#173D7A">
+        <MenuItem title="وب شات" color="#173D7A" href="https://web-shot.ir">
           <template #icon>
             <img src="@/assets/icons/left-chevron-dark.svg" alt="" />
           </template>
         </MenuItem>
-        <MenuItem title="JeoIP" color="#173D7A">
+        <MenuItem title="JeoIP" color="#173D7A" href="https://jeoip.ir">
           <template #icon>
             <img src="@/assets/icons/left-chevron-dark.svg" alt="" />
           </template>
         </MenuItem>
         <div class="drawer-menu__divider"></div>
-        <MenuItem title="پشتیبانی" color="#173D7A">
+        <MenuItem title="پشتیبانی" color="#173D7A" href="https://jeyserver.com/fa/userpanel/ticketing">
           <template #icon>
             <img src="@/assets/icons/headset_mic.svg" alt="" />
           </template>

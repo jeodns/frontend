@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="bold-font mx-2" :style="getTitleStyle">{{ title }}</span>
+    <a class="bold-font mx-2" :href="href" target="_blank" :style="getTitleStyle">{{ title }}</a>
     <slot name="icon"></slot>
   </div>
 </template>
@@ -13,6 +13,10 @@ export default defineComponent({
     title: {
       type: String,
       default: "",
+    },
+    href: {
+      type: String,
+      default: ''
     },
     color: {
       type: String,
@@ -34,5 +38,10 @@ div, span {
   opacity: 1;
   z-index: 3;
   font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
