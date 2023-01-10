@@ -1,25 +1,31 @@
 <template>
   <div class="footer__container d-flex flex-row justify-content-end mx-5 mt-3">
     <div class="footer-items__container d-flex flex-row my-auto mx-3">
-      <div class="footer__item d-flex flex-column align-items-center justify-items-center">
+      <a class="footer__item d-flex flex-column align-items-center justify-items-center" ref="telegram" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Telegram" href="https://t.me/dnjco" target="_blank">
         <img class="m-auto" src="@/assets/icons/telegram.svg" alt="">
-      </div>
-      <div class="footer__item d-flex flex-column align-items-center justify-items-center">
+      </a>
+      <a class="footer__item d-flex flex-column align-items-center justify-items-center" ref="email" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Email" href="mailto:hi@dnj.co.ir" target="_blank">
         <img class="m-auto" src="@/assets/icons/mail.svg" alt="">
-      </div>
-      <div class="footer__item d-flex flex-column align-items-center justify-items-center">
+      </a>
+      <a class="footer__item d-flex flex-column align-items-center justify-items-center" ref="call" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Call" href="tel:03134420301" target="_blank">
         <img class="m-auto" src="@/assets/icons/phone.svg" alt="">
-      </div>
+      </a>
     </div>
     <p class="footer__title medium-font my-auto">راه های ارتباطی:</p>
   </div>
 </template>
 
 <script lang="ts">
+import { Tooltip } from "bootstrap";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {},
+  mounted() {
+    new Tooltip(this.$refs.telegram)
+    new Tooltip(this.$refs.email)
+    new Tooltip(this.$refs.call)
+  },
 });
 </script>
 
@@ -43,6 +49,8 @@ export default defineComponent({
     height: 45px;
     background-color: var(--primary-color);
     border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
   }
 }
 </style>
