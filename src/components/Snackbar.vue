@@ -39,20 +39,20 @@ export default defineComponent({
 <style lang="scss" scoped>
 .toast {
   visibility: hidden;
-  min-width: 250px;
-  margin-left: -200px;
+  width: auto;
   background-color: red;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: none;
   color: white;
   text-align: center;
   border-radius: 10px;
-  padding: 10px;
-  position: fixed;
+  padding: 10px 2rem;
   z-index: 1;
+  font-size: 16px;
+  position: fixed;
   left: 50%;
   bottom: 30px;
-  font-size: 16px;
+  transform: translate(-50%);
 
   &.show {
     visibility: visible;
