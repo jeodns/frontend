@@ -27,6 +27,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+
+a {
+  text-decoration: none;
+}
+
 p {
   font-family: "Poppins";
   font-size: 18px;
