@@ -36,8 +36,9 @@
       @input="validateMessage"
     ></textarea>
     <p class="contact-card__validation-feedback iransans">{{ validationFeedbacks.message }}</p>
-    <div
+    <button
       @click="submit($event)"
+      type="submit"
       class="
         contact-card__submit
         py-2
@@ -47,12 +48,10 @@
         justify-content-center
       "
     >
-      <div v-if="loading" class="spinner-border text-secondary" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
+      <span v-if="loading" class="spinner-border text-secondary" role="status" aria-hidden="true"></span>
       <p v-if="!loading" class="iransans mx-1 my-auto">ارسال پیام</p>
       <span v-if="!loading" class="mdi mdi-arrow-left-bold" style="color: black"></span>
-    </div>
+    </button>
   </form>
 </template>
 

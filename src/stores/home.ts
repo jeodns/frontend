@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import type Message from '@/types/Message';
 
 const delay = (t = 1000) => new Promise<void>((resolve, reject) => setTimeout(() => {
-  if (Math.floor(Math.random() * 5) == 0) {
+  if (Math.floor(Math.random() * 5) != 0) {
     resolve();
   } else {
     reject();
