@@ -1,5 +1,5 @@
 <template>
-  <a class="d-flex flex-row" href="https://jeodns.com/" target="_blank">
+  <a class="d-flex flex-row" href="https://jeodns.com/">
     <p class="my-auto mx-2">JeoDNS</p>
     <img src="@/assets/icons/jeo.svg"/>
   </a>

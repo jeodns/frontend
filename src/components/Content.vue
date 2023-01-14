@@ -2,28 +2,16 @@
   <div class="content__container mx-3 mx-md-0 pb-5 pb-md-0">
     <p class="content__title">
       <span class="content__title-brand"> JeoDNS </span>
-      <span class="iransans" style="color: var(--primary-color)">؛ لورم اپسیوم متن</span>
-      <span class="iransans"> ساختگی</span>
+      <span class="iransans" style="color: var(--primary-color)">؛ سرویس ابری </span>
+      <span class="iransans"> جدید</span>
     </p>
     <p class="content__text iransans ms-md-5">
-      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
-      طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
-      که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
-      هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
-      حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها
-      شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
-      پیشرو در زبان فارسی ایجاد کرد.
+      سرویس JeoDNS یک قطعه مهم از پازل زیر ساخت ابری شرکت داده نگار جی است که به ما این امکان را می‌دهد که کاربران یک دامنه اینترنتی را براساس موقعیت جغرافیایی آن ها به سرور های مختلفی در سراسر جهان هدایت کنیم.
+      اهمیت این سرویس برای خدمات دهندگان بالا دستی مثل CDN ها و سرویس های تحریم گریز قابل توجه می‌باشد.
+      به جز قابلیت Geo-Based DNS، این سرویس دارای API قوی برای مدیریت Zone ها و رکورد ها می‌باشد.
     </p>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  setup() {},
-});
-</script>
 
 <style lang="scss" scoped>
 .content {
