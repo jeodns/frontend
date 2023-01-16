@@ -89,6 +89,6 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   direction: rtl;
-  font-family: 'IRANSans', 'Courier New', 'Courier', 'monospace';
+  font-family: 'IRANSans', 'Arial', 'Verdana', 'Tahoma', 'Trebuchet MS', 'Times New Roman', 'Courier New', 'Courier', 'monospace';
 }
 
