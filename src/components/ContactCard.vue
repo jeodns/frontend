@@ -95,12 +95,7 @@ export default defineComponent({
       this.validatePhoneNumber(this.phoneNumber)
       this.validateMessage(this.message)
       if (this.isValid) {
-        this.$emit('click:submit', {
-          name: this.name,
-          phoneNumber: this.phoneNumber,
-          message: this.message
-        })
-        // this.clearInputs()
+        this.$emit('click:submit')
       }
     },
     onNameInputHandler(e: Event) {
@@ -163,11 +158,6 @@ export default defineComponent({
       this.isValid = true
       this.validationFeedbacks.message = ''
     },
-    clearInputs() {
-      this.name = '',
-      this.phoneNumber = '',
-      this.message = ''
-    }
   },
 });
 </script>

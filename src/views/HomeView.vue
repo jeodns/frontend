@@ -60,7 +60,6 @@ import Brand from "../components/Brand.vue";
 import Footer from "../components/Footer.vue";
 import ContactCard from "../components/ContactCard.vue";
 import Content from "../components/Content.vue";
-import type Message from "../types/Message";
 import { useHomeStore } from "../stores/home";
 import { defineComponent } from "vue";
 
@@ -89,19 +88,26 @@ export default defineComponent({
     };
   },
   methods: {
-    onContactCardSubmit(message: Message) {
+    onContactCardSubmit() {
       this.homeStore
-        .sendMessage(message)
+        .sendMessage({
+          name: this.name,
+          phoneNumber: this.phoneNumber,
+          message: this.message
+        })
         .then(() => {
           this.showModal = true;
-          this.name = ''
-          this.phoneNumber = ''
-          this.message = ''
+          this.clearInputs()
         })
         .catch(() => {
           this.snackbar = true;
         });
     },
+    clearInputs() {
+      this.name = '',
+      this.phoneNumber = '',
+      this.message = ''
+    }
   },
 });
 </script>
