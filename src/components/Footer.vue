@@ -17,14 +17,19 @@
 
 <script lang="ts">
 import { Tooltip } from "bootstrap";
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  setup() {},
+  setup() {
+    const telegram = ref();
+    const email = ref();
+    const call = ref();
+    return {telegram, email, call}
+  },
   mounted() {
-    new Tooltip(this.$refs.telegram)
-    new Tooltip(this.$refs.email)
-    new Tooltip(this.$refs.call)
+    new Tooltip(this.telegram)
+    new Tooltip(this.email)
+    new Tooltip(this.call)
   },
 });
 </script>
