@@ -5,7 +5,7 @@
       با ما در تماس باشید!
     </p>
     <input
-      v-model="name"
+      :value="name"
       id="name"
       type="text"
       class="contact-card__input form-control"
@@ -13,27 +13,27 @@
       placeholder="نام شما"
       required
       minlength="5"
-      @input="validateName"
+      @input="onNameInputHandler"
     />
     <p class="contact-card__validation-feedback ">{{ validationFeedbacks.name }}</p>
     <input
-      v-model="phoneNumber"
+      :value="phoneNumber"
       id="phoneNumber"
       type="text"
       class="contact-card__input mt-4 form-control"
       :class="(validationFeedbacks.phoneNumber) ? 'not-valid' : ''"
       placeholder="شماره تماس"
-      @input="validatePhoneNumber"
+      @input="onPhoneNumberInputHandler"
     />
     <p class="contact-card__validation-feedback ">{{ validationFeedbacks.phoneNumber }}</p>
     <textarea
-      v-model="message"
+      :value="message"
       id="message"
       class="contact-card__textarea form-control mt-4"
       :class="(validationFeedbacks.message) ? 'not-valid' : ''"
       placeholder="پیام شما"
       rows="6"
-      @input="validateMessage"
+      @input="onMessageInputHandler"
     ></textarea>
     <p class="contact-card__validation-feedback">{{ validationFeedbacks.message }}</p>
     <button
@@ -60,17 +60,26 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
+    name: {
+      type: String,
+      default: ''
+    },
+    phoneNumber: {
+      type: String,
+      default: ''
+    },
+    message: {
+      type: String,
+      default: ''
+    },
     loading: {
       type: Boolean,
       default: false,
     }
   },
-  emits: ['submit'],
+  emits: ['click:submit', 'update:name', 'update:phoneNumber', 'update:message'],
   data() {
     return {
-      name: '',
-      phoneNumber: '',
-      message: '',
       validationFeedbacks: {
         name: '',
         phoneNumber: '',
@@ -82,25 +91,43 @@ export default defineComponent({
   methods: {
     submit(event: MouseEvent) {
       event.preventDefault()
-      this.validateName()
-      this.validatePhoneNumber()
-      this.validateMessage()
+      this.validateName(this.name)
+      this.validatePhoneNumber(this.phoneNumber)
+      this.validateMessage(this.message)
       if (this.isValid) {
-        this.$emit('submit', {
+        this.$emit('click:submit', {
           name: this.name,
           phoneNumber: this.phoneNumber,
           message: this.message
         })
-        this.clearInputs()
+        // this.clearInputs()
       }
     },
-    validateName() {
-      if (!this.name) {
+    onNameInputHandler(e: Event) {
+      const target = (<HTMLInputElement> e.target)
+      const newValue = target.value
+      this.$emit('update:name', newValue)
+      this.validateName(newValue)
+    },
+    onPhoneNumberInputHandler(e: Event) {
+      const target = (<HTMLInputElement> e.target)
+      const newValue = target.value
+      this.$emit('update:phoneNumber', newValue)
+      this.validatePhoneNumber(newValue)
+    },
+    onMessageInputHandler(e: Event) {
+      const target = (<HTMLInputElement> e.target)
+      const newValue = target.value
+      this.$emit('update:message', newValue)
+      this.validateMessage(newValue)
+    },
+    validateName(newValue: string) {
+      if (!newValue) {
         this.validationFeedbacks.name = 'نام الزامی است'
         this.isValid = false
         return
       }
-      if (this.name.length < 5) {
+      if (newValue.length < 5) {
         this.validationFeedbacks.name = 'نام وارد شده باید حداقل 5 کاراکتر باشد'
         this.isValid = false
         return
@@ -108,13 +135,13 @@ export default defineComponent({
       this.isValid = true
       this.validationFeedbacks.name = ''
     },
-    validatePhoneNumber() {
-      if (!this.phoneNumber) {
+    validatePhoneNumber(newValue: string) {
+      if (!newValue) {
         this.validationFeedbacks.phoneNumber = 'شماره تماس الزامی است'
         this.isValid = false
         return
       }
-      if (!(/^-?\d+$/).test(this.phoneNumber) || this.phoneNumber.length != 11 || !this.phoneNumber.startsWith('09')) {
+      if (!(/^-?\d+$/).test(newValue) || newValue.length != 11 || !newValue.startsWith('09')) {
         this.validationFeedbacks.phoneNumber = 'شماره تماس وارد شده معتبر نمی باشد'
         this.isValid = false
         return
@@ -122,13 +149,13 @@ export default defineComponent({
       this.isValid = true
       this.validationFeedbacks.phoneNumber = ''
     },
-    validateMessage() {
-      if (!this.message) {
+    validateMessage(newValue: string) {
+      if (!newValue) {
         this.validationFeedbacks.message = ' پیام الزامی است'
         this.isValid = false
         return
       }
-      if (this.message.length < 10) {
+      if (newValue.length < 10) {
         this.validationFeedbacks.message = 'پیام وارد شده باید حداقل 10 کاراکتر باشد'
         this.isValid = false
         return
