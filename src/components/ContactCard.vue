@@ -1,6 +1,6 @@
 <template>
   <form class="contact-card__container px-4 needs-validation" novalidate>
-    <p class="contact-card__title iransans mb-4">
+    <p class="contact-card__title mb-4">
       ما برای همکاری با شما آماده ایم؛ <br />
       با ما در تماس باشید!
     </p>
@@ -8,34 +8,34 @@
       v-model="name"
       id="name"
       type="text"
-      class="contact-card__input iransans form-control"
+      class="contact-card__input form-control"
       :class="(validationFeedbacks.name) ? 'not-valid' : ''"
       placeholder="نام شما"
       required
       minlength="5"
       @input="validateName"
     />
-    <p class="contact-card__validation-feedback iransans">{{ validationFeedbacks.name }}</p>
+    <p class="contact-card__validation-feedback ">{{ validationFeedbacks.name }}</p>
     <input
       v-model="phoneNumber"
       id="phoneNumber"
       type="text"
-      class="contact-card__input mt-4 iransans form-control"
+      class="contact-card__input mt-4 form-control"
       :class="(validationFeedbacks.phoneNumber) ? 'not-valid' : ''"
       placeholder="شماره تماس"
       @input="validatePhoneNumber"
     />
-    <p class="contact-card__validation-feedback iransans">{{ validationFeedbacks.phoneNumber }}</p>
+    <p class="contact-card__validation-feedback ">{{ validationFeedbacks.phoneNumber }}</p>
     <textarea
       v-model="message"
       id="message"
-      class="contact-card__textarea form-control mt-4 iransans"
+      class="contact-card__textarea form-control mt-4"
       :class="(validationFeedbacks.message) ? 'not-valid' : ''"
       placeholder="پیام شما"
       rows="6"
       @input="validateMessage"
     ></textarea>
-    <p class="contact-card__validation-feedback iransans">{{ validationFeedbacks.message }}</p>
+    <p class="contact-card__validation-feedback">{{ validationFeedbacks.message }}</p>
     <button
       @click="submit($event)"
       type="submit"
@@ -49,7 +49,7 @@
       "
     >
       <span v-if="loading" class="spinner-border text-secondary" role="status" aria-hidden="true"></span>
-      <p v-if="!loading" class="iransans mx-1 my-auto">ارسال پیام</p>
+      <p v-if="!loading" class="mx-1 my-auto">ارسال پیام</p>
       <span v-if="!loading" class="mdi mdi-arrow-left-bold" style="color: black"></span>
     </button>
   </form>
@@ -182,6 +182,7 @@ export default defineComponent({
     outline: none !important;
     box-shadow: none !important;
     font-size: 13px;
+    font-weight: normal;
 
     &:focus {
       outline: none !important;
@@ -219,7 +220,8 @@ export default defineComponent({
     & p {
       color: var(--submit-color);
       font-size: 14px;
-      font-weight: 600;
+      font-style: normal;
+      font-weight: 500;
     }
 
     & img {

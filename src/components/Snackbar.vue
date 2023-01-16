@@ -1,5 +1,5 @@
 <template>
-  <div class="toast iransans" :class="(modelValue) ? 'show' : ''">
+  <div class="toast" :class="(modelValue) ? 'show' : ''">
     {{ message }}
   </div>
 </template>

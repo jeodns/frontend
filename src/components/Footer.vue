@@ -11,7 +11,7 @@
         <img class="m-auto" src="@/assets/icons/phone.svg" alt="">
       </a>
     </div>
-    <p class="footer__title iransans my-auto">راه های ارتباطی:</p>
+    <p class="footer__title my-auto">راه های ارتباطی:</p>
   </div>
 </template>
 
@@ -36,7 +36,8 @@ export default defineComponent({
     direction: rtl;
     color: #173d7a;
     font-size: 13px;
-    font-weight: 700;
+    font-style: normal;
+    font-weight: 500;
   }
 
   &-items {

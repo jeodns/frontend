@@ -15,7 +15,7 @@
           <div class="circle">
             <div class="tick-mark"></div>
           </div>
-          <p class="modal-text iransans my-4">
+          <p class="modal-text my-4">
             از ارسال پیام شما متشکریم! <br/>
   در اسرع وقت با شما تماس خواهیم گرفت.
           </p>
@@ -70,7 +70,8 @@ export default defineComponent({
     direction: rtl;
     font-size: 16px;
     color: var(--title-color);
-    font-weight: 700;
+    font-style: normal;
+    font-weight: 500;
   }
 }
 

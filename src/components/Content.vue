@@ -2,10 +2,10 @@
   <div class="content__container mx-3 mx-md-0 pb-5 pb-md-0">
     <p class="content__title">
       <span class="content__title-brand"> JeoDNS </span>
-      <span class="iransans" style="color: var(--primary-color)">؛ لورم اپسیوم متن</span>
-      <span class="iransans"> ساختگی</span>
+      <span style="color: var(--primary-color)">؛ لورم اپسیوم متن</span>
+      <span > ساختگی</span>
     </p>
-    <p class="content__text iransans ms-md-5">
+    <p class="content__text ms-md-5">
       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
       طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
       که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
@@ -52,6 +52,8 @@ export default defineComponent({
     text-align: right;
     direction: rtl;
     color: white;
+    font-style: normal;
+    font-weight: 500;
   }
 }
 </style>
