@@ -36,12 +36,12 @@ export default defineComponent({
     font-size: 30px;
     color: white;
     text-align: right;
-    direction: rtl;
 
     &-brand {
       font-size: 36px;
-      font-family: 'Poppins';
-      font-weight: normal;
+      font-family: 'IRANSans';
+      font-style: normal;
+      font-weight: 500;
     }
 
   }
@@ -50,7 +50,6 @@ export default defineComponent({
     max-width: 560px;
     font-size: 13px;
     text-align: right;
-    direction: rtl;
     color: white;
     font-style: normal;
     font-weight: 500;

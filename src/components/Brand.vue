@@ -1,7 +1,7 @@
 <template>
   <a class="d-flex flex-row" href="https://jeodns.com/" target="_blank">
-    <p class="my-auto mx-2">JeoDNS</p>
     <img src="@/assets/icons/jeo.svg"/>
+    <p class="my-auto mx-2">JeoDNS</p>
   </a>
 </template>
 
@@ -19,7 +19,7 @@ a {
 }
 
 p {
-  font-family: "Poppins";
+  font-family: "Poppins", "IRANSans";
   font-size: 18px;
   font-weight: bold;
   color: white;

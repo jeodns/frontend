@@ -1,11 +1,11 @@
 <template>
   <div class="drawer-menu__container mx-4 pt-3">
     <div class="d-flex flex-row justify-content-between">
-      <span class="mdi mdi-24px mdi-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="color: white"></span>
       <Brand />
+      <span class="mdi mdi-24px mdi-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="color: white"></span>
     </div>
     <div class="drawer-menu__offcanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="drawer-menu__items d-flex flex-column align-items-end mx-4 mt-4">
+      <div class="drawer-menu__items d-flex flex-column mx-4 mt-4">
         <MenuItem title="هلدینگ داده نگار جی" color="#173D7A" icon-color="#173D7A" href="https://dnj.co.ir"></MenuItem>
         <MenuItem title="جی سرور" color="#173D7A" icon-color="#173D7A" href="https://jeyserver.com"></MenuItem>
         <MenuItem title="وب شات" color="#173D7A" icon-color="#173D7A" href="https://web-shot.ir"></MenuItem>

@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-row">
-    <a class="mx-2 my-auto" :href="href" target="_blank" :style="getTitleStyle">{{ title }}</a>
     <span class="my-auto mdi mdi-18px" :class="icon" :style="getIconStyle"></span>
+    <a class="mx-2 my-auto" :href="href" target="_blank" :style="getTitleStyle">{{ title }}</a>
   </div>
 </template>
 

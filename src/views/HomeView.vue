@@ -9,10 +9,10 @@
       <div class="home-main__wave"></div>
       <DrawerMenu class="home-main__drawer d-block d-md-none"/>
       <div class="home-main__header d-none d-md-flex flex-row justify-content-between pt-4 px-5">
-        <Menu class="home-main__header-menu"/>
         <Brand class="home-main__header-brand"/>
+        <Menu class="home-main__header-menu"/>
       </div>
-      <div class="d-flex flex-column align-items-center justify-content-center flex-md-row-reverse justify-content-md-start mx-md-5 pt-5">
+      <div class="d-flex flex-column align-items-center justify-content-center flex-md-row justify-content-md-start mx-md-5 pt-5">
         <Content class="home-main__content"/>
         <ContactCard class="home-main__contact-card me-md-auto" :loading="homeStore.loading" @submit="onContactCardSubmit"/>
       </div>

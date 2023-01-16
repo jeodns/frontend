@@ -49,8 +49,8 @@
       "
     >
       <span v-if="loading" class="spinner-border text-secondary" role="status" aria-hidden="true"></span>
-      <p v-if="!loading" class="mx-1 my-auto">ارسال پیام</p>
       <span v-if="!loading" class="mdi mdi-arrow-left-bold" style="color: black"></span>
+      <p v-if="!loading" class="mx-1 my-auto">ارسال پیام</p>
     </button>
   </form>
 </template>
