@@ -66,8 +66,8 @@ export default defineComponent({
   }
 
   &-content {
-    width: 369px;
-    height: 270px;
+    max-width: 369px;
+    min-height: 270px;
     -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.25);
     border: none;
