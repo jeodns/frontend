@@ -235,7 +235,6 @@ export default defineComponent({
     font-size: 12px;
     margin-top: 3px;
     text-align: right;
-    direction: rtl;
   }
 }
 </style>
